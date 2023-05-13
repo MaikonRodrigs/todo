@@ -42,12 +42,12 @@ export const TodoInput = styled.input`
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   outline: none;
   font-weight: 300;
+  color: #fff;
 
   &:focus {
     border: 1px solid #efa47a;
   }
   &::placeholder {
-    color: #efa47a;
     color: var(--secondary);
   }
   /* desabilitando a sugestão de texto */
