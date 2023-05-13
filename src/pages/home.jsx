@@ -77,10 +77,10 @@ function Home() {
 
   return (
     <Container>
-      <TodoHour>
+      {/* <TodoHour>
         <p>{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
-        {/* <p>{formattedDate}</p> */}
-      </TodoHour>
+        <p>{formattedDate}</p>
+      </TodoHour> */}
       <TodoCounter>{todos.length}
         <TodoCounterRow>
           <strong>tasks for today </strong>
@@ -88,9 +88,6 @@ function Home() {
         </TodoCounterRow>
       </TodoCounter>
       <TodoContainer>
-        {/* <form onSubmit={handleAddTodo}>
-          <TodoInput type="text" id="todoInput" placeholder="Conte-me mais..." autoComplete="off" />
-        </form> */}
         <TodoList>
           {todos.map((todo, index) => (
             <TodoItem key={index}>
@@ -124,9 +121,7 @@ function Home() {
                         prevCompletedTodos.filter((_, i) => i !== index)
                       )
                     }
-                  >
-                    X
-                  </RemoveIcon>
+                  />
                 </CompletedTodoItem>
               ))}
             </CompletedTodoList>

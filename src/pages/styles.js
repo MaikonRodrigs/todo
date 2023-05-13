@@ -3,6 +3,10 @@ import { CheckCircleFill } from "@styled-icons/bootstrap/CheckCircleFill";
 import { DeleteDismiss } from "@styled-icons/fluentui-system-filled/DeleteDismiss";
 
 export const Container = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
   max-width: 600px;
   width: 90%;
   margin: 0 auto;
@@ -15,26 +19,20 @@ export const Title = styled.h1`
 
 export const TodoContainer = styled.div`
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  width: 420px;
-  margin-bottom: 80px;
+  width: 100%;
+  margin-bottom: 70px;
 `;
 
 export const TodoForm = styled.form`
   position: fixed;
   bottom: 0;
-  left: 22px;
+  left: 0;
   right: 0;
-  width: 100%;
-  /* height: 20px; */
+  text-align: center;
 `;
 
 export const TodoInput = styled.input`
-  background: #fff;
+  background: #6a6a6a;
   width: 420px;
   padding: 20px;
   font-size: 16px;
@@ -50,6 +48,7 @@ export const TodoInput = styled.input`
   }
   &::placeholder {
     color: #efa47a;
+    color: var(--secondary);
   }
   /* desabilitando a sugestão de texto */
   &:-webkit-autofill,
@@ -70,16 +69,15 @@ export const TodoItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+
   border-bottom: 1px solid #ccc;
-
-  padding: 10px 0 20px;
-
-  width: 420px;
 `;
 
 export const TodoText = styled.span`
-  font-size: 16px;
-  color: #888888;
+  font-size: 20px;
+  color: #fff;
   flex: 1;
 `;
 
@@ -107,7 +105,6 @@ export const TodoCounterRow = styled.div`
     font-size: 18px;
     color: #888888;
     font-weight: 300;
-
   }
   p {
     bottom: 25px;
@@ -130,8 +127,8 @@ export const TodoCounter = styled.p`
 `;
 
 export const RemoveIcon = styled(DeleteDismiss)`
-  width: 20px;
-  margin-left: 4px;
+  width: 25px;
+  margin-left: 8px;
   color: #efa47a;
   cursor: pointer;
 
@@ -141,7 +138,7 @@ export const RemoveIcon = styled(DeleteDismiss)`
 `;
 
 export const CheckIcon = styled(CheckCircleFill)`
-  width: 15px;
+  width: 20px;
   cursor: pointer;
   color: #2ed573;
 
@@ -180,8 +177,9 @@ export const CompletedTodoItem = styled.li`
 export const CompletedTodoText = styled.span`
   font-size: 16px;
   flex: 1;
-  color: #ccc;
+  color: #fff;
   text-align: left;
+  text-decoration: line-through;
 `;
 
 export const TodoDate = styled.span`

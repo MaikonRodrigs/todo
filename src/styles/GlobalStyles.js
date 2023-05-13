@@ -24,7 +24,7 @@ html, border-style, #root {
     }
     
     html {
-        background: var(--gray-light);
+        background: var(--secondary);
         transition: background .3s ease-in-out;
         color: var(--secondary);
     }
